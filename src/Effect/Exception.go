@@ -3,10 +3,10 @@ func Error(msg string) error { return errors.New(msg) }
 func Message(e error) string { return e.Error() }
 func Name(e error) string { return "Error" }
 func ShowErrorImpl(e error) string { return e.Error() }
-func StackImpl(just func(string) any, nothing any, e error) any { return nothing }
-func ThrowException(e error) func() any { return func() any { panic(e) } }
-func CatchException(c func(error) func() any, t func() any) func() any {
-	return func() (res any) {
+func StackImpl(just func(string) interface{}, nothing interface{}, e error) interface{} { return nothing }
+func ThrowException(e error) func() interface{} { return func() interface{} { panic(e) } }
+func CatchException(c func(error) func() interface{}, t func() interface{}) func() interface{} {
+	return func() (res interface{}) {
 		defer func() {
 			if r := recover(); r != nil {
 				if err, ok := r.(error); ok {
