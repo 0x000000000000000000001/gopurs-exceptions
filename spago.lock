@@ -676,9 +676,6 @@
       "effect": {
         "path": "../gopurs-effect"
       },
-      "partial": {
-        "path": "../gopurs-partial"
-      },
       "prelude": {
         "path": "../gopurs-prelude"
       }

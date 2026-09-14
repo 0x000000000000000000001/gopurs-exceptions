@@ -24,5 +24,3 @@ workspace:
       path: "../gopurs-effect"
     prelude:
       path: "../gopurs-prelude"
-    partial:
-      path: "../gopurs-partial"
